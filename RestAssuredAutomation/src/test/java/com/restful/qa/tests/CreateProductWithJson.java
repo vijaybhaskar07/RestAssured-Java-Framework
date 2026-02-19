@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 
-public class CreateProductPayload {
+public class CreateProductWithJson {
 	
 	@Test
 	public void testProductAddition() {

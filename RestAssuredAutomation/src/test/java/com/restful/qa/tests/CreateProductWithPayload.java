@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.qa.restful.payloads.Data;
 import com.qa.restful.payloads.Product;
 
-public class CreateProduct1 {
+public class CreateProductWithPayload {
 
 	@Test
 	public void testAddProduct() {

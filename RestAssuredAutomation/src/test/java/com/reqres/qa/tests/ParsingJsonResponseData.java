@@ -18,6 +18,7 @@ public class ParsingJsonResponseData {
 		// Approach1
 		given()
 			.contentType(ContentType.JSON)
+			.header("x-api-key", "reqres_d125d7a54ea14747a6bf5476483f49a9")
 
 		.when()
 			.get("https://reqres.in/api/users?page=2")
@@ -33,7 +34,7 @@ public class ParsingJsonResponseData {
 	void testJsonResponse1() {
 
 		Response res = given().contentType(ContentType.JSON)
-
+				.header("x-api-key", "reqres_d125d7a54ea14747a6bf5476483f49a9")
 				.when().get("https://reqres.in/api/users?page=2");
 
 		Assert.assertEquals(res.statusCode(), 200);
@@ -47,7 +48,7 @@ public class ParsingJsonResponseData {
 
 		Response res = given()
 				.contentType(ContentType.JSON)
-
+				.header("x-api-key", "reqres_d125d7a54ea14747a6bf5476483f49a9")
 				.when().get("https://reqres.in/api/users?page=2");
 
 		JSONObject jo = new JSONObject(res.asString()); // Converting response to Json object
@@ -63,7 +64,7 @@ public class ParsingJsonResponseData {
 	void testJsonResponsebodyData1() {
 
 		Response res = given().contentType(ContentType.JSON)
-
+				.header("x-api-key", "reqres_d125d7a54ea14747a6bf5476483f49a9")
 				.when().get("https://reqres.in/api/users?page=2");
 
 		JSONObject jo = new JSONObject(res.asString()); // Converting response to Json object
